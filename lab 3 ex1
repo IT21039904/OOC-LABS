@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 struct Circle
 {
@@ -53,7 +54,7 @@ int main()
   
   garden = yardArea- (circleArea + rectangleArea + squareArea );
   
-  cout<<"The area of the garden is: "<< garden <<endl;
+  cout<<"The area of the garden is: "<< setiosflags (ios :: fixed) << setprecision << garden <<endl;
 
 }
 
@@ -68,5 +69,4 @@ float areaRectangle( Rectangle r)
 float areaSquare(Square s)
 {
     return s.length*s.length;
-
 }
