@@ -1,0 +1,3 @@
+float areaCircle (float radius);
+float areaRectangle(float length, float width);
+float areaSquare (float length);
