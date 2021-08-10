@@ -1,0 +1,17 @@
+//function declaration
+
+class Employee
+{
+  private :
+      int    empNo;
+      char   name [20];
+      double basicSal;
+      double allowance;
+      double salary;
+
+  public :
+      void setDetails(int pempNo, char const pname [],double pbasicSal);
+      void setAllowance (double pAllowance);
+      void calcSal();
+      void printPaysal();
+};
