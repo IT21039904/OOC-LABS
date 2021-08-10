@@ -1,0 +1,21 @@
+#include <iostream>
+#include "Employee.h"
+#include <cstring>
+using namespace std;
+
+int main() 
+{
+  Employee emp1, emp2;
+
+  emp1.setDetails(27, "Wimal" ,50000);
+  emp1.setAllowance (5000);
+  emp1.calcSal();
+  emp1.printPaysal();
+
+  emp2.setDetails(10, "Ranugi" ,30000);
+  emp2.setAllowance (5000);
+  emp2.calcSal();
+  emp2.printPaysal();
+
+  return 0;
+}
