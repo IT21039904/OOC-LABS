@@ -37,7 +37,7 @@ int main()
   sqArea=areaSquare (s1.length);
   yArea =areaRectangle(y1.length, y1.width);
 
-  garden= yArea - (cArea + rArea + sqArea + yArea);
+  garden= yArea - (cArea + rArea + sqArea );
 
   cout<<"Area of the garden is:"<< setiosflags (ios::fixed) << setprecision(2) << garden << endl;
 
