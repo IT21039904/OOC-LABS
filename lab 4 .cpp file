@@ -1,0 +1,17 @@
+//function implementation
+#include "ShapeArea.h"
+#include <iostream>
+using namespace std;
+
+float areaCircle (float radius)
+{
+    return (22.0/7.00) * radius * radius;  
+}
+float areaRectangle(float length, float width)
+{
+    return length * width; 
+}
+float areaSquare (float length)
+{
+    return length * length;
+}
