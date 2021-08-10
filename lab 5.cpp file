@@ -1,0 +1,30 @@
+//function implementation
+#include <iostream>
+#include "Employee.h"
+#include <cstring>;
+using namespace std;
+
+void Employee:: setDetails(int pempNo, char const pname [],double pbasicSal)
+{
+    empNo = pempNo;
+    strcpy(name, pname );
+    basicSal = pbasicSal;
+}
+void Employee :: setAllowance (double pAllowance)
+{
+    allowance= pAllowance;
+}      
+void Employee :: calcSal()
+{
+    salary = basicSal + allowance;
+}
+void Employee :: printPaysal()
+{
+    cout<<"------------------------------" <<endl;
+    cout<<"Emp No \t:" << empNo<<endl;
+    cout<<"Name \t:"   << name <<endl;
+    cout<<"Basic Salary\t:"<< basicSal <<endl;
+    cout<<"Allowance\t:"<<allowance <<endl;
+    cout<<"Net Salary\t:"<<salary   << endl;
+    cout<<"------------------------------" <<endl;
+}
