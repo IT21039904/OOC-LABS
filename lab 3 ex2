@@ -1,0 +1,97 @@
+#include <iostream>
+
+struct Circle
+{
+  float radius;
+};
+
+struct Rectangle
+{
+  float length;
+  float width;
+};
+
+struct Square
+{
+  float length;
+};
+
+float areaCircle( Circle c);
+float areaRectangle(Rectangle r);
+float areaSquare(Square s);
+float findPerimeter(Rectangle r, float &perimeter);
+float buildingCost( float perimeter, float unitCost);
+using namespace std;
+
+int main() 
+{
+  struct Circle c1;
+  struct Rectangle r1, y1;
+  struct Square s1;
+
+  float yardArea, circleArea, rectangleArea, squareArea;
+  float unitCost  =0;
+  float garden    =0;
+  float perimeter =0;
+  
+  cout<<"Enter length of yard: ";
+  cin>> y1.length;
+  cout<<"Enter width of yard: ";  
+  cin>> y1.width;
+
+  cout<<"Enter radius value: ";
+  cin>> c1.radius;
+  
+  cout<<"Enter length of rectangle: ";
+  cin>> r1.length;
+  cout<<"Enter width of rectangle: ";
+  cin>> r1.width;
+
+  cout<<"Enter length of square: ";
+  cin>> s1.length;
+
+  cout<<"Enter unit cost: "
+  cin>> unitCost;
+
+
+  yardArea      = areaRectangle (y1);
+  circleArea    = areaCircle( c1);
+  squareArea    = areaSquare(s1);
+  rectangleArea = areaRectangle(r1);
+  
+  garden = yardArea- (circleArea + rectangleArea + squareArea );
+  
+  cout<<"The area of the garden is: "<< garden <<endl;
+
+  cout<<"The perimeter of the yard is: "<< findPerimeter( y1,perimeter) <<endl;
+
+
+  cout<<"Total building cost : "<< buildingCost( perimeter, unitCost);
+
+}
+
+float areaCircle( Circle c )
+{
+    return (22.00/7)* c.radius* c.radius;
+}
+float areaRectangle( Rectangle r)
+{
+    return r.length *r.width;
+}
+float areaSquare(Square s)
+{
+    return s.length*s.length;
+
+}
+
+float findPerimeter(Rectangle r, float &perimeter)
+{
+  return perimeter = (r.length*2) + (r.width*2); 
+}
+
+float buildingCost( float perimeter, float unitCost)
+{
+  float totalCost;
+      totalCost= unitCost*perimeter;
+  return totalCost; 
+}
