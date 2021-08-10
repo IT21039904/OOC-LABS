@@ -1,0 +1,44 @@
+#include "ShapeArea.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+struct Circle
+{
+    float radius;
+};
+struct Rectangle
+{
+    float length;
+    float width;
+};
+struct Square
+{
+    float length;
+};
+
+int main() 
+{
+  Circle    c1;
+  Rectangle r1, y1;
+  Square    s1;
+
+  c1.radius= 5;
+  r1.length= 7;
+  r1.width = 3;
+  s1.length= 4;
+  y1.length=28;
+  y1.width =15;
+
+  float cArea, rArea, sqArea, yArea, garden;
+
+  cArea= areaCircle (c1.radius);
+  rArea= areaRectangle(r1.length, r1.width);
+  sqArea=areaSquare (s1.length);
+  yArea =areaRectangle(y1.length, y1.width);
+
+  garden= yArea - (cArea + rArea + sqArea + yArea);
+
+  cout<<"Area of the garden is:"<< setiosflags (ios::fixed) << setprecision(2) << garden << endl;
+
+}
